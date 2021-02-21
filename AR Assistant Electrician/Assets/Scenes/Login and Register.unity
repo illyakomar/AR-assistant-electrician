@@ -4492,6 +4492,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fdf50bd4db4aed4cac30a08d93a27ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loginUI: {fileID: 126107286}
+  registerUI: {fileID: 699764023}
 --- !u!4 &1522279286
 Transform:
   m_ObjectHideFlags: 0
