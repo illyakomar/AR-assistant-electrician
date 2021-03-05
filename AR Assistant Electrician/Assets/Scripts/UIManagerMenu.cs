@@ -22,6 +22,11 @@ public class UIManagerMenu : MonoBehaviour
             Destroy(this);
         }
     }
+    
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 
     public void MenuScreen()
     {
