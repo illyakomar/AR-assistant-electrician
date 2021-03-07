@@ -45,4 +45,10 @@ public class UIManagerMenu : MonoBehaviour
         menuLabUI.SetActive(false);
         labUI.SetActive(true);
     }
+
+    public void BackMenuLabUIScreen()
+    {
+        labUI.SetActive(false);
+        menuLabUI.SetActive(true);
+    }
 }
