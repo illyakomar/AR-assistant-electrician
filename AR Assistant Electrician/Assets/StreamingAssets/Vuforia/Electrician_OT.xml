@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="QCAR_Dataset_config.xsd">
+  <Tracking>
+    <ObjectTarget name="multimetr" />
+    <ObjectTarget name="ShopResistanceP32" />
+    <ObjectTarget name="VoltmeterE515" />
+    <ObjectTarget name="MilliammeterE513" />
+  </Tracking>
+</QCARConfig>

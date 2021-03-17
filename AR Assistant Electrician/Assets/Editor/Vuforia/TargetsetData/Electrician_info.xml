@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="QCAR_Dataset_config.xsd">
+  <TargetSet version="5.0" toolVersion="4.2.0">
+    <ObjectTarget bbox="0.0000 0.0000 0.0000 0.1425 0.0950 0.0950" captureAppVersion="6.5.0" lastSaved="2021-02-24T14:45:16Z" name="multimetr" targetId="0981bc02857641c9a5e693900d00b853" version="12.0" />
+    <ObjectTarget bbox="0.0000 0.0000 0.0000 0.1425 0.0950 0.0950" captureAppVersion="6.5.0" lastSaved="2021-02-24T09:30:08Z" name="ShopResistanceP32" targetId="2b0315519f0245fbb6e67880ae34f9e2" version="12.0" />
+    <ObjectTarget bbox="0.0000 0.0000 0.0000 0.1425 0.0950 0.0950" captureAppVersion="6.5.0" lastSaved="2021-02-24T08:57:11Z" name="VoltmeterE515" targetId="8199bed5ac2846b8bd2f8f8e7d6d3962" version="12.0" />
+    <ObjectTarget bbox="0.0000 0.0000 0.0000 0.1425 0.0950 0.0950" captureAppVersion="6.5.0" lastSaved="2021-02-24T09:27:00Z" name="MilliammeterE513" targetId="896d8b8069924e8e8b8825110d28e6bb" version="12.0" />
+  </TargetSet>
+</QCARInfo>
