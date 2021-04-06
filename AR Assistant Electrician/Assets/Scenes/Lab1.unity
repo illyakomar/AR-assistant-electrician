@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1719,7 +1719,7 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1544929826}
+      - m_Target: {fileID: 1544929825}
         m_MethodName: LinkVoltmeter
         m_Mode: 1
         m_Arguments:
@@ -2998,8 +2998,8 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1544929826}
-        m_MethodName: YouTube
+      - m_Target: {fileID: 1544929825}
+        m_MethodName: YouTubeAmmeter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3579,7 +3579,7 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1544929826}
+      - m_Target: {fileID: 1544929825}
         m_MethodName: WikipediaSupportShop
         m_Mode: 1
         m_Arguments:
@@ -4090,8 +4090,8 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1544929826}
-        m_MethodName: Link
+      - m_Target: {fileID: 1544929825}
+        m_MethodName: LinkAmmeter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4625,7 +4625,7 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1544929826}
+      - m_Target: {fileID: 1544929825}
         m_MethodName: InfoVoltmeter
         m_Mode: 1
         m_Arguments:
@@ -6073,8 +6073,8 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1544929826}
-        m_MethodName: Info
+      - m_Target: {fileID: 1544929825}
+        m_MethodName: InfoAmmeter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8201,7 +8201,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &610197491
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9770,7 +9770,7 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1544929826}
+      - m_Target: {fileID: 1544929825}
         m_MethodName: PortalSupportShop
         m_Mode: 1
         m_Arguments:
@@ -10976,8 +10976,8 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1544929826}
-        m_MethodName: Wikipedia
+      - m_Target: {fileID: 1544929825}
+        m_MethodName: WikipediaAmmeter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13009,7 +13009,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 211, y: 36}
+  m_SizeDelta: {x: 206, y: 36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1018951779
 MonoBehaviour:
@@ -14064,7 +14064,7 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1544929826}
+      - m_Target: {fileID: 1544929825}
         m_MethodName: WikipediaVoltmeter
         m_Mode: 1
         m_Arguments:
@@ -14294,8 +14294,8 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1544929826}
-        m_MethodName: Portal
+      - m_Target: {fileID: 1544929825}
+        m_MethodName: PortalAmmeter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16339,7 +16339,7 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1544929826}
+      - m_Target: {fileID: 1544929825}
         m_MethodName: LinkSupportShop
         m_Mode: 1
         m_Arguments:
@@ -16616,7 +16616,7 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1544929826}
+      - m_Target: {fileID: 1544929825}
         m_MethodName: YouTubeVoltmeter
         m_Mode: 1
         m_Arguments:
@@ -18291,7 +18291,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1544929824}
   - component: {fileID: 1544929825}
-  - component: {fileID: 1544929826}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -18333,18 +18332,6 @@ MonoBehaviour:
   SupportShop: {fileID: 958100367}
   Source: {fileID: 686429609}
   Camera: {fileID: 1816185990}
---- !u!114 &1544929826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544929823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6f43cee3ada84148b4920cb44183ef8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   AmmeterInfo: {fileID: 133248721}
   AmmeterYouTube: {fileID: 934211339}
   AmmeterLink: {fileID: 318570806}
@@ -18892,7 +18879,7 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1544929826}
+      - m_Target: {fileID: 1544929825}
         m_MethodName: PortalVoltmeter
         m_Mode: 1
         m_Arguments:
@@ -19716,7 +19703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1717496192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19898,7 +19885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1725887397
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21447,7 +21434,7 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1544929826}
+      - m_Target: {fileID: 1544929825}
         m_MethodName: InfoSupportShop
         m_Mode: 1
         m_Arguments:
@@ -22669,7 +22656,7 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1544929826}
+      - m_Target: {fileID: 1544929825}
         m_MethodName: YouTubeSupportShop
         m_Mode: 1
         m_Arguments:
