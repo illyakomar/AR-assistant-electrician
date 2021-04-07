@@ -14,6 +14,8 @@ public class UIManagerLab : MonoBehaviour
     public GameObject SupportShop;
     public GameObject Source;
     public GameObject Camera;
+    public GameObject Green;
+    public GameObject ScanLine;
 
     public GameObject AmmeterInfo;
     public GameObject AmmeterYouTube;
@@ -59,6 +61,8 @@ public class UIManagerLab : MonoBehaviour
         Ammeter.SetActive(true);
         LabLabEquipment.SetActive(false);
         AllLab.SetActive(false);
+        Green.SetActive(true);
+        ScanLine.SetActive(true);
     }
 
     public void OnVoltmeter()
@@ -67,6 +71,8 @@ public class UIManagerLab : MonoBehaviour
         Voltmeter.SetActive(true);
         LabLabEquipment.SetActive(false);
         AllLab.SetActive(false);
+        Green.SetActive(true);
+        ScanLine.SetActive(true);
     }
 
     public void OnSupportShop()
@@ -75,6 +81,8 @@ public class UIManagerLab : MonoBehaviour
         SupportShop.SetActive(true);
         LabLabEquipment.SetActive(false);
         AllLab.SetActive(false);
+        Green.SetActive(true);
+        ScanLine.SetActive(true);
     }
 
     public void OnSource()
@@ -83,6 +91,8 @@ public class UIManagerLab : MonoBehaviour
         Camera.SetActive(true);
         LabLabEquipment.SetActive(false);
         AllLab.SetActive(false);
+        Green.SetActive(true);
+        ScanLine.SetActive(true);
     }
 
     public void FromAmmeter()
@@ -94,6 +104,8 @@ public class UIManagerLab : MonoBehaviour
         info = false;
         youtube = false;
         link = false;
+        Green.SetActive(false);
+        ScanLine.SetActive(false);
     }
 
     public void FromVoltmeter()
@@ -105,6 +117,8 @@ public class UIManagerLab : MonoBehaviour
         info = false;
         youtube = false;
         link = false;
+        Green.SetActive(false);
+        ScanLine.SetActive(false);
     }
 
     public void FromSupportShop()
@@ -116,6 +130,8 @@ public class UIManagerLab : MonoBehaviour
         info = false;
         youtube = false;
         link = false;
+        Green.SetActive(false);
+        ScanLine.SetActive(false);
     }
 
     public void FromSource()
@@ -124,6 +140,8 @@ public class UIManagerLab : MonoBehaviour
         Camera.SetActive(false);
         LabLabEquipment.SetActive(true);
         AllLab.SetActive(true);
+        Green.SetActive(false);
+        ScanLine.SetActive(false);
     }
 
     public void InfoAmmeter()
