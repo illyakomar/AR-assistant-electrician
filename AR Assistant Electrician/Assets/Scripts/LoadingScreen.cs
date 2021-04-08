@@ -9,6 +9,7 @@ public class LoadingScreen : MonoBehaviour
 
     public int loadLab;
     public GameObject loadingScreen;
+    public Text progressValue;
 
     public void Load()
     {
@@ -24,12 +25,12 @@ public class LoadingScreen : MonoBehaviour
 
         while (!asyncLoad.isDone)
         {
+            float progress = Mathf.Clamp01(asyncLoad.progress);
+            progressValue.text = (progress * 100f).ToString("F0");
+          
             if(asyncLoad.progress >= .9f && !asyncLoad.allowSceneActivation)
             {
-                if(Input.anyKeyDown)
-                {
-                    asyncLoad.allowSceneActivation = true;
-                }
+                asyncLoad.allowSceneActivation = true;
             }
 
             yield return null;

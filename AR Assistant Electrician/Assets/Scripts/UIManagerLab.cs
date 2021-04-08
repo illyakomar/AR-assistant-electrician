@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManagerLab : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class UIManagerLab : MonoBehaviour
     public bool info;
     public bool youtube;
     public bool link;
+
+    public int loadLab;
 
     private void Awake()
     {
@@ -298,5 +301,10 @@ public class UIManagerLab : MonoBehaviour
     public void PortalSupportShop()
     {
         Application.OpenURL("http://standart-m.com.ua/elektroizmeritelnoe-oborudovanie/magaziny-soprotivleniy/magaziny-soprotivleniy-r33?mova=uk");
+    }
+
+    public void LoadLabProgress()
+    {
+        SceneManager.LoadSceneAsync(loadLab);
     }
 }
