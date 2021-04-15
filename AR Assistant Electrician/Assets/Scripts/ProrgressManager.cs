@@ -13,11 +13,14 @@ public class ProrgressManager : MonoBehaviour
     public GameObject Step1;
     public GameObject Step2;
     public GameObject Step3;
-    public GameObject Step4;
     public GameObject SupportShop;
     public GameObject Camera;
     public GameObject Green;
     public GameObject ScanLine;
+    public GameObject AmmeterObject;
+    public GameObject ShopResistance;
+    public GameObject VoltmeterObject;
+    public GameObject EPCObject;
 
 
     private void Awake()
@@ -61,7 +64,8 @@ public class ProrgressManager : MonoBehaviour
         Screen3.SetActive(false);
         Screen4.SetActive(true);
         Step3.SetActive(false);
-        Step4.SetActive(true);
+        VoltmeterObject.SetActive(false);
+        EPCObject.SetActive(false);
     }
 
     public void FromScreen2()
@@ -78,5 +82,12 @@ public class ProrgressManager : MonoBehaviour
         Screen3.SetActive(false);
         Step2.SetActive(true);
         Step3.SetActive(false);
+    }
+
+    public void FromScreen4()
+    {
+        Screen3.SetActive(true);
+        Screen4.SetActive(false);
+        Step3.SetActive(true);
     }
 }
