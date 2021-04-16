@@ -10,17 +10,18 @@ public class ProrgressManager : MonoBehaviour
     public GameObject Screen2;
     public GameObject Screen3;
     public GameObject Screen4;
+    public GameObject Screen5;
+    public GameObject Screen6;
+    public GameObject Screen7;
     public GameObject Step1;
     public GameObject Step2;
     public GameObject Step3;
-    public GameObject SupportShop;
     public GameObject Camera;
     public GameObject Green;
     public GameObject ScanLine;
-    public GameObject AmmeterObject;
-    public GameObject ShopResistance;
-    public GameObject VoltmeterObject;
-    public GameObject EPCObject;
+    public GameObject WireForStep4;
+    public GameObject WireForStep6;
+
 
 
     private void Awake()
@@ -64,8 +65,27 @@ public class ProrgressManager : MonoBehaviour
         Screen3.SetActive(false);
         Screen4.SetActive(true);
         Step3.SetActive(false);
-        VoltmeterObject.SetActive(false);
-        EPCObject.SetActive(false);
+        WireForStep4.SetActive(true);
+    }
+
+    public void LoadScreen5()
+    {
+        Screen4.SetActive(false);
+        Screen5.SetActive(true);
+    }
+
+    public void LoadScreen6()
+    {
+        Screen5.SetActive(false);
+        Screen6.SetActive(true);
+        WireForStep4.SetActive(false);
+        WireForStep6.SetActive(true);
+    }
+
+    public void LoadScreen7()
+    {
+        Screen6.SetActive(false);
+        Screen7.SetActive(true);
     }
 
     public void FromScreen2()
@@ -89,5 +109,19 @@ public class ProrgressManager : MonoBehaviour
         Screen3.SetActive(true);
         Screen4.SetActive(false);
         Step3.SetActive(true);
+    }
+
+    public void FromScreen5()
+    {
+        Screen4.SetActive(true);
+        Screen5.SetActive(false);
+    }
+
+    public void FromScreen6()
+    {
+        Screen5.SetActive(true);
+        Screen6.SetActive(false);
+        WireForStep4.SetActive(true);
+        WireForStep6.SetActive(false);
     }
 }
