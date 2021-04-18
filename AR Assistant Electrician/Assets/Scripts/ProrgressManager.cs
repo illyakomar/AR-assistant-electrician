@@ -45,6 +45,8 @@ public class ProrgressManager : MonoBehaviour
         StartLab.SetActive(false);
         Camera.SetActive(false);
         Screen1.SetActive(true);
+        Green.SetActive(true);
+        ScanLine.SetActive(true);
     }
 
     public void LoadScreen2()
