@@ -21,9 +21,6 @@ public class PickupObject : MonoBehaviour {
 	void Update () {
 		if(carrying) {
 			carry(carriedObject);
-
-		} else {
-			pickObject();
 		}
 	}
 	
