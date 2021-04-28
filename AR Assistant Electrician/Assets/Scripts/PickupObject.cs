@@ -43,7 +43,7 @@ public class PickupObject : MonoBehaviour {
 			if(p != null) {
 				carrying = true;
 				carriedObject = p.gameObject;
-				p.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+				p.gameObject.GetComponent<Rigidbody>().isKinematic = false;
 				PickPotionButton.SetActive (false);
 				DropPotionButton.SetActive (true);
 
@@ -60,7 +60,7 @@ public class PickupObject : MonoBehaviour {
 	public void dropObject() {
 		carrying = false;
 		if(carriedObject != null)
-			carriedObject.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+			carriedObject.gameObject.GetComponent<Rigidbody>().isKinematic = true;
 		carriedObject = null;
 		PickPotionButton.SetActive (true);
 		DropPotionButton.SetActive (false);
