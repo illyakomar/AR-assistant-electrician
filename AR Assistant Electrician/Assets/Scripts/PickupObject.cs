@@ -38,14 +38,16 @@ public class PickupObject : MonoBehaviour {
 
 		Ray ray = mainCamera.GetComponent<Camera>().ScreenPointToRay(new Vector3(x,y));
 		RaycastHit hit;
-		if(Physics.Raycast(ray, out hit)) {
+		if (Physics.Raycast(ray, out hit)) {
 			Pickupable p = hit.collider.GetComponent<Pickupable>();
-			if(p != null) {
+			if (p != null) {
+				Outline hoveredOutline = p.GetComponent<Outline>();
 				carrying = true;
 				carriedObject = p.gameObject;
 				p.gameObject.GetComponent<Rigidbody>().isKinematic = false;
 				PickPotionButton.SetActive (false);
 				DropPotionButton.SetActive (true);
+				hoveredOutline.OutlineWidth = 3;
 
 			}
 		}
@@ -58,9 +60,13 @@ public class PickupObject : MonoBehaviour {
 	}
 	
 	public void dropObject() {
+		Outline hoveredOutlineOff = carriedObject.gameObject.GetComponent<Outline>();
 		carrying = false;
-		if(carriedObject != null)
+		if (carriedObject != null)
+		{
+			hoveredOutlineOff.OutlineWidth = 0;
 			carriedObject.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+		}
 		carriedObject = null;
 		PickPotionButton.SetActive (true);
 		DropPotionButton.SetActive (false);
