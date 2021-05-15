@@ -8,12 +8,6 @@ public class PickupObject : MonoBehaviour {
 	public float distance;
 	public float smooth;
 
-	public GameObject AmmeterVoltmeter;
-	public GameObject SupportShop;
-	public GameObject Source;
-	public GameObject Lamp;
-	public GameObject Switch;
-
 	bool carrying;
 	GameObject mainCamera;
 	GameObject carriedObject;
@@ -78,10 +72,5 @@ public class PickupObject : MonoBehaviour {
 		DropPotionButton.SetActive (false);
 	}
 
-	public void GetAmmeterAndVoltmeter()
-    {
-		AmmeterVoltmeter.SetActive(true);
-		
-	}
 }
 
