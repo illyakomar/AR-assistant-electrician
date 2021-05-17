@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lab1Progress.unity
     guid: cafd7917f42ac8a409e7a469ee18e613
+  - enabled: 1
+    path: Assets/Scenes/MenuMultiplayer.unity
+    guid: 5ec36cce3b74f4e41a807e81f239c73b
   m_configObjects: {}

@@ -6,7 +6,7 @@ using TMPro;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class GameLevel : MonoBehaviour
+public class GameLevel : MonoBehaviourPunCallbacks
 {
     public TextMeshProUGUI playerListText;
 
@@ -23,6 +23,12 @@ public class GameLevel : MonoBehaviour
                 playerListText.text += player.NickName + "\n";
         }
 
+    }
+
+
+    public void DestroyManager()
+    {
+        Destroy(NetworkManager.instance.gameObject);
     }
 
 }

@@ -27,6 +27,9 @@ public class UIManagerLab : MonoBehaviour
     public GameObject SupportShopInfo;
     public GameObject SupportShopYouTube;
     public GameObject SupportShopLink;
+    public GameObject BatteryInfo;
+    public GameObject BatteryYouTube;
+    public GameObject BatteryLink;
     public bool info;
     public bool youtube;
     public bool link;
@@ -189,6 +192,20 @@ public class UIManagerLab : MonoBehaviour
         }
     }
 
+    public void InfoBattery()
+    {
+        if (!info)
+        {
+            BatteryInfo.SetActive(true);
+            info = true;
+        }
+        else
+        {
+            BatteryInfo.SetActive(false);
+            info = false;
+        }
+    }
+
     public void YouTubeAmmeter()
     {
         if (!youtube)
@@ -227,6 +244,20 @@ public class UIManagerLab : MonoBehaviour
         else
         {
             SupportShopYouTube.SetActive(false);
+            youtube = false;
+        }
+    }
+
+    public void YouTubeBattery()
+    {
+        if (!youtube)
+        {
+            BatteryYouTube.SetActive(true);
+            youtube = true;
+        }
+        else
+        {
+            BatteryYouTube.SetActive(false);
             youtube = false;
         }
     }
@@ -273,6 +304,20 @@ public class UIManagerLab : MonoBehaviour
         }
     }
 
+    public void LinkBattery()
+    {
+        if (!link)
+        {
+            BatteryLink.SetActive(true);
+            link = true;
+        }
+        else
+        {
+            BatteryLink.SetActive(false);
+            link = false;
+        }
+    }
+
     public void WikipediaAmmeter()
     {
         Application.OpenURL("https://uk.wikipedia.org/wiki/Амперметр");
@@ -301,6 +346,16 @@ public class UIManagerLab : MonoBehaviour
     public void PortalSupportShop()
     {
         Application.OpenURL("http://standart-m.com.ua/elektroizmeritelnoe-oborudovanie/magaziny-soprotivleniy/magaziny-soprotivleniy-r33?mova=uk");
+    }
+
+    public void WikipediaBattery()
+    {
+        Application.OpenURL("https://uk.wikipedia.org/wiki/Електрорушійна_сила");
+    }
+
+    public void WikipediaBatter2()
+    {
+        Application.OpenURL("https://uk.wikipedia.org/wiki/Джерело_живлення");
     }
 
     public void LoadLabProgress()

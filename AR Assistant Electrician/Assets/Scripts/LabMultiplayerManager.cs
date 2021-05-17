@@ -8,6 +8,7 @@ using Photon.Realtime;
 
 public class LabMultiplayerManager : MonoBehaviourPunCallbacks
 {
+
     [Header("Screens")]
     public GameObject mainScreen;
     public GameObject lobbyScreen;
@@ -103,4 +104,8 @@ public class LabMultiplayerManager : MonoBehaviourPunCallbacks
         NetworkManager.instance.photonView.RPC("ChangeScene", RpcTarget.All, "GameLevelLab");
     }
 
+    public void DestroyNetworkManager()
+    {
+        Destroy(NetworkManager.instance.gameObject);
+    }
 }
