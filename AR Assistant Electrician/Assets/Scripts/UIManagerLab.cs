@@ -112,6 +112,9 @@ public class UIManagerLab : MonoBehaviour
         link = false;
         Green.SetActive(false);
         ScanLine.SetActive(false);
+        AmmeterInfo.SetActive(false);
+        AmmeterYouTube.SetActive(false);
+        AmmeterLink.SetActive(false);
     }
 
     public void FromVoltmeter()
@@ -125,6 +128,9 @@ public class UIManagerLab : MonoBehaviour
         link = false;
         Green.SetActive(false);
         ScanLine.SetActive(false);
+        VoltmeterInfo.SetActive(false);
+        VoltmeterYouTube.SetActive(false);
+        VoltmeterLink.SetActive(false);
     }
 
     public void FromSupportShop()
@@ -138,6 +144,9 @@ public class UIManagerLab : MonoBehaviour
         link = false;
         Green.SetActive(false);
         ScanLine.SetActive(false);
+        SupportShopInfo.SetActive(false);
+        SupportShopYouTube.SetActive(false);
+        SupportShopLink.SetActive(false);
     }
 
     public void FromSource()
@@ -146,8 +155,14 @@ public class UIManagerLab : MonoBehaviour
         Camera.SetActive(false);
         LabLabEquipment.SetActive(true);
         AllLab.SetActive(true);
+        info = false;
+        youtube = false;
+        link = false;
         Green.SetActive(false);
         ScanLine.SetActive(false);
+        BatteryInfo.SetActive(false);
+        BatteryYouTube.SetActive(false);
+        BatteryLink.SetActive(false);
     }
 
     public void InfoAmmeter()
