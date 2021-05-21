@@ -34,7 +34,6 @@ public class UIManagerLab : MonoBehaviour
     public bool youtube;
     public bool link;
 
-    public int loadLab;
 
     private void Awake()
     {
@@ -373,8 +372,4 @@ public class UIManagerLab : MonoBehaviour
         Application.OpenURL("https://uk.wikipedia.org/wiki/Джерело_живлення");
     }
 
-    public void LoadLabProgress()
-    {
-        SceneManager.LoadSceneAsync(loadLab);
-    }
 }

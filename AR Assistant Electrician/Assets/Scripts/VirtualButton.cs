@@ -5,26 +5,24 @@ using Vuforia;
 
 public class VirtualButton : MonoBehaviour
 {
-    public GameObject vbBtnObj;
-    public GameObject cubeAni;
+    public GameObject VbBtnObj;
+    public GameObject Info;
+    public string NameButton;
 
-    // Use this for initialization
     void Start()
     {
-        vbBtnObj = GameObject.Find("AmmeterBtn");
-        vbBtnObj.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonPressed(OnButtonPressed);
-        vbBtnObj.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonReleased(OnButtonReleased);
+        VbBtnObj = GameObject.Find(NameButton);
+        VbBtnObj.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonPressed(OnButtonPressed);
+        VbBtnObj.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonReleased(OnButtonReleased);
     }
 
     public void OnButtonPressed(VirtualButtonBehaviour vb)
     {
-        cubeAni.SetActive(true);
-        Debug.Log("Button pressed");
+        Info.SetActive(true);
     }
 
     public void OnButtonReleased(VirtualButtonBehaviour vb)
     {
-        cubeAni.SetActive(false);
-        Debug.Log("Button released");
+        Info.SetActive(false);
     }
 }
