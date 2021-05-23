@@ -27,11 +27,13 @@ public class UIManagerLab : MonoBehaviour
     public GameObject SupportShopInfo;
     public GameObject SupportShopYouTube;
     public GameObject SupportShopLink;
+    public GameObject BatteryInfo;
+    public GameObject BatteryYouTube;
+    public GameObject BatteryLink;
     public bool info;
     public bool youtube;
     public bool link;
 
-    public int loadLab;
 
     private void Awake()
     {
@@ -109,6 +111,9 @@ public class UIManagerLab : MonoBehaviour
         link = false;
         Green.SetActive(false);
         ScanLine.SetActive(false);
+        AmmeterInfo.SetActive(false);
+        AmmeterYouTube.SetActive(false);
+        AmmeterLink.SetActive(false);
     }
 
     public void FromVoltmeter()
@@ -122,6 +127,9 @@ public class UIManagerLab : MonoBehaviour
         link = false;
         Green.SetActive(false);
         ScanLine.SetActive(false);
+        VoltmeterInfo.SetActive(false);
+        VoltmeterYouTube.SetActive(false);
+        VoltmeterLink.SetActive(false);
     }
 
     public void FromSupportShop()
@@ -135,6 +143,9 @@ public class UIManagerLab : MonoBehaviour
         link = false;
         Green.SetActive(false);
         ScanLine.SetActive(false);
+        SupportShopInfo.SetActive(false);
+        SupportShopYouTube.SetActive(false);
+        SupportShopLink.SetActive(false);
     }
 
     public void FromSource()
@@ -143,8 +154,14 @@ public class UIManagerLab : MonoBehaviour
         Camera.SetActive(false);
         LabLabEquipment.SetActive(true);
         AllLab.SetActive(true);
+        info = false;
+        youtube = false;
+        link = false;
         Green.SetActive(false);
         ScanLine.SetActive(false);
+        BatteryInfo.SetActive(false);
+        BatteryYouTube.SetActive(false);
+        BatteryLink.SetActive(false);
     }
 
     public void InfoAmmeter()
@@ -185,6 +202,20 @@ public class UIManagerLab : MonoBehaviour
         else
         {
             SupportShopInfo.SetActive(false);
+            info = false;
+        }
+    }
+
+    public void InfoBattery()
+    {
+        if (!info)
+        {
+            BatteryInfo.SetActive(true);
+            info = true;
+        }
+        else
+        {
+            BatteryInfo.SetActive(false);
             info = false;
         }
     }
@@ -231,6 +262,20 @@ public class UIManagerLab : MonoBehaviour
         }
     }
 
+    public void YouTubeBattery()
+    {
+        if (!youtube)
+        {
+            BatteryYouTube.SetActive(true);
+            youtube = true;
+        }
+        else
+        {
+            BatteryYouTube.SetActive(false);
+            youtube = false;
+        }
+    }
+
     public void LinkAmmeter()
     {
         if (!link)
@@ -273,6 +318,20 @@ public class UIManagerLab : MonoBehaviour
         }
     }
 
+    public void LinkBattery()
+    {
+        if (!link)
+        {
+            BatteryLink.SetActive(true);
+            link = true;
+        }
+        else
+        {
+            BatteryLink.SetActive(false);
+            link = false;
+        }
+    }
+
     public void WikipediaAmmeter()
     {
         Application.OpenURL("https://uk.wikipedia.org/wiki/Амперметр");
@@ -303,8 +362,14 @@ public class UIManagerLab : MonoBehaviour
         Application.OpenURL("http://standart-m.com.ua/elektroizmeritelnoe-oborudovanie/magaziny-soprotivleniy/magaziny-soprotivleniy-r33?mova=uk");
     }
 
-    public void LoadLabProgress()
+    public void WikipediaBattery()
     {
-        SceneManager.LoadSceneAsync(loadLab);
+        Application.OpenURL("https://uk.wikipedia.org/wiki/Електрорушійна_сила");
     }
+
+    public void WikipediaBatter2()
+    {
+        Application.OpenURL("https://uk.wikipedia.org/wiki/Джерело_живлення");
+    }
+
 }

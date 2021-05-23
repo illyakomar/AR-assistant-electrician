@@ -15,15 +15,9 @@ public class ProrgressManager : MonoBehaviour
     public GameObject Screen7;
     public GameObject Screen8;
     public GameObject Screen9;
-    public GameObject Step1;
-    public GameObject Step2;
-    public GameObject Step3;
     public GameObject Camera;
     public GameObject Green;
     public GameObject ScanLine;
-    public GameObject WireForStep4;
-    public GameObject WireForStep6;
-    public GameObject WireForStep8;
 
 
 
@@ -53,24 +47,18 @@ public class ProrgressManager : MonoBehaviour
     {
         Screen1.SetActive(false);
         Screen2.SetActive(true);
-        Step1.SetActive(false);
-        Step2.SetActive(true);
     }
 
     public void LoadScreen3()
     {
         Screen2.SetActive(false);
         Screen3.SetActive(true);
-        Step2.SetActive(false);
-        Step3.SetActive(true);
     }
 
     public void LoadScreen4()
     {
         Screen3.SetActive(false);
         Screen4.SetActive(true);
-        Step3.SetActive(false);
-        WireForStep4.SetActive(true);
     }
 
     public void LoadScreen5()
@@ -83,8 +71,6 @@ public class ProrgressManager : MonoBehaviour
     {
         Screen5.SetActive(false);
         Screen6.SetActive(true);
-        WireForStep4.SetActive(false);
-        WireForStep6.SetActive(true);
     }
 
     public void LoadScreen7()
@@ -97,8 +83,6 @@ public class ProrgressManager : MonoBehaviour
     {
         Screen7.SetActive(false);
         Screen8.SetActive(true);
-        WireForStep6.SetActive(false);
-        WireForStep8.SetActive(true);
     }
 
     public void LoadScreen9()
@@ -111,23 +95,18 @@ public class ProrgressManager : MonoBehaviour
     {
         Screen1.SetActive(true);
         Screen2.SetActive(false);
-        Step1.SetActive(true);
-        Step2.SetActive(false);
     }
 
     public void FromScreen3()
     {
         Screen2.SetActive(true);
         Screen3.SetActive(false);
-        Step2.SetActive(true);
-        Step3.SetActive(false);
     }
 
     public void FromScreen4()
     {
         Screen3.SetActive(true);
         Screen4.SetActive(false);
-        Step3.SetActive(true);
     }
 
     public void FromScreen5()
@@ -140,8 +119,6 @@ public class ProrgressManager : MonoBehaviour
     {
         Screen5.SetActive(true);
         Screen6.SetActive(false);
-        WireForStep4.SetActive(true);
-        WireForStep6.SetActive(false);
     }
 
     public void FromScreen7()
@@ -154,8 +131,6 @@ public class ProrgressManager : MonoBehaviour
     {
         Screen7.SetActive(true);
         Screen8.SetActive(false);
-        WireForStep6.SetActive(true);
-        WireForStep8.SetActive(false);
     }
 
     public void FromScreen9()
