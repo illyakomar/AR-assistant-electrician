@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lab2Progress.unity
     guid: 9b7f41771d667254294c3f11085c1a5a
+  - enabled: 1
+    path: Assets/Scenes/Lab2.unity
+    guid: a5cae00da895b0542bc3a61652fb69ce
   m_configObjects: {}

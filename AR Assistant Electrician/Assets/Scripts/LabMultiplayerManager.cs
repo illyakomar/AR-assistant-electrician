@@ -12,6 +12,7 @@ public class LabMultiplayerManager : MonoBehaviourPunCallbacks
     [Header("Screens")]
     public GameObject mainScreen;
     public GameObject lobbyScreen;
+    public GameObject loadingScreen;
 
 
     [Header("Main Screen")]
@@ -101,11 +102,14 @@ public class LabMultiplayerManager : MonoBehaviourPunCallbacks
 
     public void OnStartGameButton()
     {
+        loadingScreen.SetActive(true);
         NetworkManager.instance.photonView.RPC("ChangeScene", RpcTarget.All, "GameLevelLab");
     }
 
-    public void DestroyNetworkManager()
+    public void GoBackToMainMenu()
     {
         Destroy(NetworkManager.instance.gameObject);
+        PhotonNetwork.Disconnect();
+        NetworkManager.instance.ChangeScene("Menu");
     }
 }
