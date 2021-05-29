@@ -18,6 +18,9 @@ public class LabMultiplayerManager : MonoBehaviourPunCallbacks
     [Header("Main Screen")]
     public Button createRoomButton;
     public Button joinRoomButton;
+    public GameObject playerAndRoomNameAlert;
+    public TMP_InputField roomNameInput;
+    public TMP_InputField playerNameInput;
 
     [Header("Lobby Screen")]
     public TextMeshProUGUI playerListText;
@@ -45,28 +48,55 @@ public class LabMultiplayerManager : MonoBehaviourPunCallbacks
         screen.SetActive(true);
     }
 
-    public void OnCreateRoomButton(TMP_InputField roomNameInput)
+    public void OnCreateRoomButton()
     {
-        NetworkManager.instance.CreateRoom(roomNameInput.text);
-        roomNameText.text = roomNameInput.text;
+        var alerRoom = roomNameInput.text;
+        var alerName = playerNameInput.text;
+
+        if (!string.IsNullOrEmpty(alerRoom) && !string.IsNullOrEmpty(alerName))
+        {
+            NetworkManager.instance.CreateRoom(roomNameInput.text);
+            roomNameText.text = roomNameInput.text;
+            playerAndRoomNameAlert.SetActive(false);
+        }
+        else
+        {
+            playerAndRoomNameAlert.SetActive(true);
+        } 
     }
 
-    public void OnJoinRoomButton(TMP_InputField roomNameInput)
+    public void OnJoinRoomButton()
     {
-        NetworkManager.instance.JoinRoom(roomNameInput.text);
-        roomNameText.text = roomNameInput.text;
+        var alerRoom = roomNameInput.text;
+        var alerName = playerNameInput.text;
+
+        if (!string.IsNullOrEmpty(alerRoom) && !string.IsNullOrEmpty(alerName))
+        {
+            NetworkManager.instance.JoinRoom(roomNameInput.text);
+            roomNameText.text = roomNameInput.text;
+            playerAndRoomNameAlert.SetActive(false);
+        }
+        else
+        {
+            playerAndRoomNameAlert.SetActive(true);
+        }
     }
 
     public void OnPlayerNameUpdate(TMP_InputField playerNameInput)
     {
+        playerNameInput.characterLimit = 20;
         PhotonNetwork.NickName = playerNameInput.text;
+    }
+
+    public void OnRoomNameUpdate(TMP_InputField roomNameInput)
+    {
+        roomNameInput.characterLimit = 20;
     }
 
     public override void OnJoinedRoom()
     {
         SetScreen(lobbyScreen);
         photonView.RPC("UpdateLobbyUI", RpcTarget.All);
-
     }
 
     public override void OnPlayerLeftRoom(Player otherPlayer)

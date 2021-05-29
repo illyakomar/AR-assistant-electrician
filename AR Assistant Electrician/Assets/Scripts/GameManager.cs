@@ -7,17 +7,32 @@ using System.Linq;
 using TMPro;
 
 public class GameManager : MonoBehaviourPunCallbacks
-{ 
+{
     public TextMeshProUGUI playerListText;
+    [HideInInspector]
+    public PlayerController[] players;  
+    [HideInInspector]
+    private int playersInGame;
 
-    public override void OnPlayerLeftRoom(Player otherPlayer)
+    public static GameManager instance;
+
+    void Awake()
     {
-        UpdateLobbyUI();
+        instance = this;
     }
 
-    [PunRPC]
-    public void UpdateLobbyUI()
+    void Start()
     {
+        players = new PlayerController[PhotonNetwork.PlayerList.Length];
+        photonView.RPC("ImInGame", RpcTarget.AllBuffered);
+    }
+
+  
+    [PunRPC]
+    void ImInGame()
+    {
+        playersInGame++;
+
         playerListText.text = "";
 
         foreach (Player player in PhotonNetwork.PlayerList)
@@ -27,12 +42,12 @@ public class GameManager : MonoBehaviourPunCallbacks
             else
                 playerListText.text += player.NickName + "\n";
         }
-
     }
 
     public void GoBackToMenu()
     {
         PhotonNetwork.LeaveRoom();
+        PhotonNetwork.Disconnect();
         NetworkManager.instance.ChangeScene("MenuMultiplayer");
     }
 }
