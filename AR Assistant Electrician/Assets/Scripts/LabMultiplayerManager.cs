@@ -84,13 +84,13 @@ public class LabMultiplayerManager : MonoBehaviourPunCallbacks
 
     public void OnPlayerNameUpdate(TMP_InputField playerNameInput)
     {
-        playerNameInput.characterLimit = 20;
+        playerNameInput.characterLimit = 16;
         PhotonNetwork.NickName = playerNameInput.text;
     }
 
     public void OnRoomNameUpdate(TMP_InputField roomNameInput)
     {
-        roomNameInput.characterLimit = 20;
+        roomNameInput.characterLimit = 16;
     }
 
     public override void OnJoinedRoom()
