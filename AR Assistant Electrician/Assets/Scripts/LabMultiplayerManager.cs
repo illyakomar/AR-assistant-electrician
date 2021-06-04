@@ -9,23 +9,28 @@ using Photon.Realtime;
 public class LabMultiplayerManager : MonoBehaviourPunCallbacks
 {
 
+
     [Header("Screens")]
     public GameObject mainScreen;
     public GameObject lobbyScreen;
     public GameObject loadingScreen;
-
+    public GameObject roomScreen;
+    public GameObject createScreen;
 
     [Header("Main Screen")]
     public Button createRoomButton;
     public Button joinRoomButton;
-    public GameObject playerAndRoomNameAlert;
+    public GameObject playerAlert;
+    public GameObject roomAlert;
     public TMP_InputField roomNameInput;
     public TMP_InputField playerNameInput;
+    public Slider maxPlayersSlider;
+    public Text maxPlayersValue;
 
     [Header("Lobby Screen")]
     public TextMeshProUGUI playerListText;
     public Button startGameButton;
-    public TextMeshProUGUI roomNameText;
+
 
 
     private void Start()
@@ -44,41 +49,52 @@ public class LabMultiplayerManager : MonoBehaviourPunCallbacks
     {
         mainScreen.SetActive(false);
         lobbyScreen.SetActive(false);
+        roomScreen.SetActive(false);
+        createScreen.SetActive(false);
 
         screen.SetActive(true);
+    }
+
+    public void CreateRoomScreen()
+    {
+        var alerName = playerNameInput.text;
+        if (!string.IsNullOrEmpty(alerName))
+        {
+            SetScreen(createScreen);
+            playerAlert.SetActive(false);
+        }
+        else
+        {
+            playerAlert.SetActive(true);
+        }
     }
 
     public void OnCreateRoomButton()
     {
         var alerRoom = roomNameInput.text;
-        var alerName = playerNameInput.text;
 
-        if (!string.IsNullOrEmpty(alerRoom) && !string.IsNullOrEmpty(alerName))
+        if (!string.IsNullOrEmpty(alerRoom))
         {
-            NetworkManager.instance.CreateRoom(roomNameInput.text);
-            roomNameText.text = roomNameInput.text;
-            playerAndRoomNameAlert.SetActive(false);
+            NetworkManager.instance.CreateRoom(roomNameInput.text, (byte)maxPlayersSlider.value);
+            roomAlert.SetActive(false);
         }
         else
         {
-            playerAndRoomNameAlert.SetActive(true);
+            roomAlert.SetActive(true);
         } 
     }
 
-    public void OnJoinRoomButton()
+    public void ListRoomScreen()
     {
-        var alerRoom = roomNameInput.text;
         var alerName = playerNameInput.text;
-
-        if (!string.IsNullOrEmpty(alerRoom) && !string.IsNullOrEmpty(alerName))
+        if (!string.IsNullOrEmpty(alerName))
         {
-            NetworkManager.instance.JoinRoom(roomNameInput.text);
-            roomNameText.text = roomNameInput.text;
-            playerAndRoomNameAlert.SetActive(false);
+            SetScreen(roomScreen);
+            playerAlert.SetActive(false);
         }
         else
         {
-            playerAndRoomNameAlert.SetActive(true);
+            playerAlert.SetActive(true);
         }
     }
 
@@ -122,6 +138,10 @@ public class LabMultiplayerManager : MonoBehaviourPunCallbacks
         else startGameButton.interactable = false;
     }
 
+    public void ChangeMaxPlayersSlider(float value)
+    {
+        maxPlayersValue.text = Mathf.RoundToInt(value).ToString();
+    }
 
     public void OnLeaveLobbyButton()
     {
@@ -129,6 +149,10 @@ public class LabMultiplayerManager : MonoBehaviourPunCallbacks
         SetScreen(mainScreen);
     }
 
+    public void OnLeavaRoomCreate()
+    {
+        SetScreen(mainScreen);
+    }
 
     public void OnStartGameButton()
     {
