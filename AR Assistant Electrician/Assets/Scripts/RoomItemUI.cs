@@ -8,7 +8,7 @@ public class RoomItemUI : MonoBehaviourPunCallbacks
 {
     public NetworkManager NetworkManager;
     [SerializeField] private TextMeshProUGUI _roomName;
-    [SerializeField] private Text _maxPlayer;
+    [SerializeField] private TextMeshProUGUI _maxPlayer;
 
 
     public void SetName(string roomName)

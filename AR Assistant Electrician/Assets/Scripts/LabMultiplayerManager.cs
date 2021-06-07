@@ -14,8 +14,9 @@ public class LabMultiplayerManager : MonoBehaviourPunCallbacks
     public GameObject mainScreen;
     public GameObject lobbyScreen;
     public GameObject loadingScreen;
-    public GameObject roomScreen;
     public GameObject createScreen;
+    public Canvas roomCanvas;
+    public Canvas menuCanvas;
 
     [Header("Main Screen")]
     public Button createRoomButton;
@@ -49,7 +50,6 @@ public class LabMultiplayerManager : MonoBehaviourPunCallbacks
     {
         mainScreen.SetActive(false);
         lobbyScreen.SetActive(false);
-        roomScreen.SetActive(false);
         createScreen.SetActive(false);
 
         screen.SetActive(true);
@@ -89,7 +89,8 @@ public class LabMultiplayerManager : MonoBehaviourPunCallbacks
         var alerName = playerNameInput.text;
         if (!string.IsNullOrEmpty(alerName))
         {
-            SetScreen(roomScreen);
+            roomCanvas.sortingOrder = 1;
+            menuCanvas.sortingOrder = 0;
             playerAlert.SetActive(false);
         }
         else
@@ -111,6 +112,8 @@ public class LabMultiplayerManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
+        roomCanvas.sortingOrder = 0;
+        menuCanvas.sortingOrder = 1;
         SetScreen(lobbyScreen);
         photonView.RPC("UpdateLobbyUI", RpcTarget.All);
     }
@@ -147,6 +150,12 @@ public class LabMultiplayerManager : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.LeaveRoom();
         SetScreen(mainScreen);
+    }
+
+    public void OnLeaveRoomButton()
+    {
+        roomCanvas.sortingOrder = 0;
+        menuCanvas.sortingOrder = 1;
     }
 
     public void OnLeavaRoomCreate()
