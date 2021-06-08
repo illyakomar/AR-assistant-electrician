@@ -9,7 +9,7 @@ public class UIManagerMenu : MonoBehaviour
     public GameObject menuUI;
     public GameObject menuLabUI;
     public GameObject labUI;
-    public GameObject labMultiplayer;
+    public GameObject instUI;
 
     private void Awake()
     {
@@ -41,10 +41,16 @@ public class UIManagerMenu : MonoBehaviour
         menuLabUI.SetActive(true);
     }
 
-    public void LabMultiplayer()
+    public void InstructionUIScreen()
     {
-        menuLabUI.SetActive(false);
-        labMultiplayer.SetActive(true);
+        menuUI.SetActive(false);
+        instUI.SetActive(true);
+    }
+
+    public void FromInstructionUIScreen()
+    {
+        menuUI.SetActive(true);
+        instUI.SetActive(false);
     }
 
     public void LabUIScreen()
@@ -59,9 +65,9 @@ public class UIManagerMenu : MonoBehaviour
         menuLabUI.SetActive(true);
     }
 
-    public void FromLabMultiplayer()
+    public void LinkAR()
     {
-        menuLabUI.SetActive(true);
-        labMultiplayer.SetActive(false);
+        Application.OpenURL("https://drive.google.com/drive/folders/1lv-qtC4y69hwGP7lTEHSAm_7fStBuV4I?usp=sharing");
     }
+
 }
