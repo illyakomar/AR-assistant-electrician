@@ -9,6 +9,7 @@ using TMPro;
 public class GameManager : MonoBehaviourPunCallbacks
 {
     public TextMeshProUGUI playerListText;
+    public GameObject rootPanel;
     [HideInInspector]
     public PlayerController[] players;  
     [HideInInspector]
@@ -42,7 +43,13 @@ public class GameManager : MonoBehaviourPunCallbacks
             else
                 playerListText.text += player.NickName + "\n";
         }
+
+        if (PhotonNetwork.IsMasterClient)
+            rootPanel.SetActive(true);
+        else rootPanel.SetActive(false);
     }
+
+    
 
     public void GoBackToMenu()
     {
