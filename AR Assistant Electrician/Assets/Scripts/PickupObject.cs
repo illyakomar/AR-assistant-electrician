@@ -1,24 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using TMPro;
 
 public class PickupObject : MonoBehaviour {
 
 	public GameObject PickPotionButton;
 	public GameObject DropPotionButton;
 	public GameObject WireBox;
-	public GameObject _WireRedBox;
-	public GameObject _WireBlueBox;
 	public GameObject WireBattery;
-	public GameObject _WireRedBattery;
-	public GameObject _WireBlueBattery;
 	public GameObject WireLamp;
-	public GameObject _WireRedLamp;
-	public GameObject _WireBlueLamp;
 	public GameObject WireResistor;
-	public GameObject WireRedSwitch1;
-	public GameObject WireRedSwitch2;
-	public GameObject WireBlueSwitch1;
-	public GameObject WireBlueSwitch2;
+
+	public GameObject WireController1;
+	public GameObject WireController2;
+	public GameObject WireController3;
+	public GameObject WireController4;
+
+	public TextMeshPro textInAmmeter;
+
 	public float distance;
 	public float smooth;
 	private bool box;
@@ -37,7 +37,8 @@ public class PickupObject : MonoBehaviour {
 	}
 	
 	void Update () {
-		if(carrying) {
+		onVoltmeterAndLamp();
+		if (carrying) {
 			carry(carriedObject);
 		}
 	}
@@ -144,16 +145,18 @@ public class PickupObject : MonoBehaviour {
 
 	public void resetWire()
     {
-		_WireRedBox.SetActive(false);
-		_WireBlueBox.SetActive(false);
-		_WireRedBattery.SetActive(false);
-		_WireBlueBattery.SetActive(false);
-		_WireRedLamp.SetActive(false);
-		_WireBlueLamp.SetActive(false);
-		WireRedSwitch1.SetActive(false);
-		WireRedSwitch2.SetActive(false);
-		WireBlueSwitch1.SetActive(false);
-		WireBlueSwitch2.SetActive(false);
+		 WireBox.SetActive(false);
+		 WireBattery.SetActive(false);
+		 WireLamp.SetActive(false);
+		 WireResistor.SetActive(false);
+	}
+
+	void onVoltmeterAndLamp()
+    {
+		if(WireController1.activeSelf && WireController2.activeSelf && WireController3.activeSelf && WireController4.activeSelf)
+        {
+			textInAmmeter.SetText("33.33");
+		}
 	}
 
 	void checkDrop() {
