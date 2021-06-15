@@ -16,8 +16,11 @@ public class PickupObject : MonoBehaviour {
 	public GameObject WireController2;
 	public GameObject WireController3;
 	public GameObject WireController4;
+	public GameObject WireController5;
 
-	public TextMeshPro textInAmmeter;
+	public GameObject Lights;
+
+	public TextMeshPro textInVoltmeter;
 
 	public float distance;
 	public float smooth;
@@ -145,17 +148,30 @@ public class PickupObject : MonoBehaviour {
 
 	public void resetWire()
     {
-		 WireBox.SetActive(false);
-		 WireBattery.SetActive(false);
-		 WireLamp.SetActive(false);
-		 WireResistor.SetActive(false);
+		WireBox.SetActive(false);
+		WireBattery.SetActive(false);
+		WireLamp.SetActive(false);
+		WireResistor.SetActive(false);
+		Lights.SetActive(false);
+		textInVoltmeter.SetText("00.00");
+		WireController1.SetActive(false);
+		WireController2.SetActive(false);
+		WireController3.SetActive(false);
+		WireController4.SetActive(false);
+		WireController5.SetActive(false);
 	}
 
 	void onVoltmeterAndLamp()
     {
 		if(WireController1.activeSelf && WireController2.activeSelf && WireController3.activeSelf && WireController4.activeSelf)
         {
-			textInAmmeter.SetText("33.33");
+			textInVoltmeter.SetText("33.33");
+			Lights.SetActive(true);
+		}
+
+		if(WireController1.activeSelf && WireController5.activeSelf)
+		{
+			Lights.SetActive(true);
 		}
 	}
 
