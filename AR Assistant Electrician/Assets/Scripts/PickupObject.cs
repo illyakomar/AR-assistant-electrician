@@ -18,6 +18,13 @@ public class PickupObject : MonoBehaviour {
 	public GameObject WireController4;
 	public GameObject WireController5;
 
+
+	public Button ConnectButton1;
+	public Button ConnectButton2;
+	public Button ConnectButton3;
+	public Button ConnectButton4;
+	public Button ConnectButton5;
+
 	public GameObject Lights;
 
 	public TextMeshPro textInVoltmeter;
@@ -41,6 +48,7 @@ public class PickupObject : MonoBehaviour {
 	
 	void Update () {
 		onVoltmeterAndLamp();
+		OnButtonActive();
 		if (carrying) {
 			carry(carriedObject);
 		}
@@ -94,7 +102,10 @@ public class PickupObject : MonoBehaviour {
 				}
 				else
 				{
+					WireController4.SetActive(false);
+					WireController5.SetActive(false);
 					WireBox.SetActive(false);
+					textInVoltmeter.SetText("00.00");
 					box = false;
 				}
 			}
@@ -110,6 +121,9 @@ public class PickupObject : MonoBehaviour {
 				else
 				{
 					WireBattery.SetActive(false);
+					WireController1.SetActive(false);
+					WireController3.SetActive(false);
+					Lights.SetActive(false);
 					batterys = false;
 				}
 			}
@@ -125,6 +139,11 @@ public class PickupObject : MonoBehaviour {
 				else
 				{
 					WireLamp.SetActive(false);
+					WireController2.SetActive(false);
+					WireController3.SetActive(false);
+					WireController4.SetActive(false);
+					WireController5.SetActive(false);
+					Lights.SetActive(false);
 					lamps = false;
 				}
 			}
@@ -139,6 +158,8 @@ public class PickupObject : MonoBehaviour {
 				}
 				else
 				{
+					WireController1.SetActive(false);
+					WireController2.SetActive(false);
 					WireResistor.SetActive(false);
 					resistors = false;
 				}
@@ -159,19 +180,65 @@ public class PickupObject : MonoBehaviour {
 		WireController3.SetActive(false);
 		WireController4.SetActive(false);
 		WireController5.SetActive(false);
+		ConnectButton1.gameObject.SetActive(false);
+		ConnectButton2.gameObject.SetActive(false);
+		ConnectButton3.gameObject.SetActive(false);
+		ConnectButton4.gameObject.SetActive(false);
+		ConnectButton5.gameObject.SetActive(false);
 	}
 
 	void onVoltmeterAndLamp()
     {
-		if(WireController1.activeSelf && WireController2.activeSelf && WireController3.activeSelf && WireController4.activeSelf)
+		if(WireController1.activeSelf && WireController2.activeSelf && WireController3.activeSelf && WireController4.activeSelf && WireController5.activeSelf)
         {
-			textInVoltmeter.SetText("33.33");
+			textInVoltmeter.SetText("00.85");
 			Lights.SetActive(true);
 		}
 
-		if(WireController1.activeSelf && WireController5.activeSelf)
+		if (WireController1.activeSelf && WireController2.activeSelf && WireController3.activeSelf)
 		{
 			Lights.SetActive(true);
+		}
+	}
+
+	void OnButtonActive()
+    {
+		if (WireBattery.activeSelf && WireResistor.activeSelf)
+		{
+			ConnectButton1.gameObject.SetActive(true);
+		}
+		else
+        {
+			ConnectButton1.gameObject.SetActive(false);
+		}
+
+		if (WireBattery.activeSelf && WireLamp.activeSelf)
+		{
+			ConnectButton3.gameObject.SetActive(true);
+		}
+		else
+        {
+			ConnectButton3.gameObject.SetActive(false);
+		}
+
+		if (WireResistor.activeSelf && WireLamp.activeSelf)
+		{
+			ConnectButton2.gameObject.SetActive(true);
+		}
+		else
+		{
+			ConnectButton2.gameObject.SetActive(false);
+		}
+
+		if (WireLamp.activeSelf && WireBox.activeSelf)
+		{
+			ConnectButton4.gameObject.SetActive(true);
+			ConnectButton5.gameObject.SetActive(true);
+		}
+		else
+        {
+			ConnectButton4.gameObject.SetActive(false);
+			ConnectButton5.gameObject.SetActive(false);
 		}
 	}
 
