@@ -1237,7 +1237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 679778.25}
+  m_AnchoredPosition: {x: 0, y: 680035.2}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &167234803
@@ -6176,7 +6176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfca5105d6e7c1849839f8da152ae7c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerListText: {fileID: 0}
+  playerListText: {fileID: 167234804}
   rootPanel: {fileID: 1910458954}
   players: []
 --- !u!114 &1333643008
@@ -12736,7 +12736,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 325, y: -12993.432}
+  m_AnchoredPosition: {x: 325, y: -13097.345}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8531607057357293005
