@@ -497,8 +497,8 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2441745879030395568}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -590,8 +590,8 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2441745879802782664}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1127,6 +1127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b26f5520c08da40b98f92b049cde04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  variableWire: {fileID: 2441745878889496711}
+  textInVoltmeter: {fileID: 2441745878373149442}
 --- !u!1 &5376467916369842857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,6 +1472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b26f5520c08da40b98f92b049cde04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  variableWire: {fileID: 2441745878889496711}
+  textInVoltmeter: {fileID: 2441745878373149442}
 --- !u!1 &7076397695704002084
 GameObject:
   m_ObjectHideFlags: 0

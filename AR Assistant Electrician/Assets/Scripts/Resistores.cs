@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Resistores : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject resistoresWire;
 
-    // Update is called once per frame
-    void Update()
+    public void SetWire(bool hasWire)
     {
-        
+        resistoresWire.SetActive(hasWire);
     }
 }

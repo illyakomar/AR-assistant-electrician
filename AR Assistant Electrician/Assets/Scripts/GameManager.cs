@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     [HideInInspector]
     private int playersInGame;
 
+
     public static GameManager instance;
 
     void Awake()
@@ -49,7 +50,6 @@ public class GameManager : MonoBehaviourPunCallbacks
         else rootPanel.SetActive(false);
     }
 
-    
 
     public void GoBackToMenu()
     {

@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Lamp : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject lampWire;
+    public GameObject lights;
+
+    public void SetWire(bool hasWire)
     {
-        
+        lampWire.SetActive(hasWire);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetLightOn()
     {
-        
+        lights.SetActive(true);
+    }
+
+    public void SetLightOff()
+    {
+        lights.SetActive(false);
     }
 }

@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Battery : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject batteryWire;
 
-    // Update is called once per frame
-    void Update()
+    public void SetWire(bool hasWire)
     {
-        
+        batteryWire.SetActive(hasWire);
     }
 }
