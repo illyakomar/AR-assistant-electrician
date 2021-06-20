@@ -997,7 +997,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 830781.25}
+  m_AnchoredPosition: {x: 0, y: 831741.75}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &167234803
@@ -1588,7 +1588,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1712995732}
-        m_MethodName: OnWireController4
+        m_MethodName: OnClickWireController4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2247,7 +2247,7 @@ PrefabInstance:
     - target: {fileID: 107448288901275293, guid: 6153313d167d40e43a72246675a17214,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -26432.303
+      value: -26756.021
       objectReference: {fileID: 0}
     - target: {fileID: 107448289135566640, guid: 6153313d167d40e43a72246675a17214,
         type: 3}
@@ -3674,7 +3674,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1712995732}
-        m_MethodName: OnWireController3
+        m_MethodName: OnClickWireController3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4073,7 +4073,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1712995732}
-        m_MethodName: OnWireController5
+        m_MethodName: OnClickWireController5
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9011,7 +9011,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1712995732}
-        m_MethodName: OnWireController2
+        m_MethodName: OnClickWireController2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9285,7 +9285,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1712995732}
-        m_MethodName: OnWireController1
+        m_MethodName: OnClickWireController1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10164,7 +10164,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 325, y: -74072.51}
+  m_AnchoredPosition: {x: 325, y: -74460.98}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8531607057357293005

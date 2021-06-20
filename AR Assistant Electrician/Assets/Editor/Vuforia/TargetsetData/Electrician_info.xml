@@ -5,10 +5,6 @@
     <ObjectTarget bbox="0.0000 0.0000 0.0000 0.1425 0.0950 0.0950" captureAppVersion="6.5.0" lastSaved="2021-06-18T11:40:02Z" name="VoltmeterE515V2" targetId="a9feafea0ded4ac1a86fb4603cc2b61a" version="12.0" />
     <ObjectTarget bbox="0.0000 0.0000 0.0000 0.1425 0.0950 0.0950" captureAppVersion="6.5.0" lastSaved="2021-05-14T07:44:18Z" name="ShopResistanceP33V3" targetId="0d02a60501f04e239306e1eacbd2a77b" version="12.0" />
     <ObjectTarget bbox="0.0000 0.0000 0.0000 0.1425 0.0950 0.0950" captureAppVersion="6.5.0" lastSaved="2021-05-14T07:39:25Z" name="ShopResistanceP33V2" targetId="90c938292d6f43f69490f746c952affc" version="12.0" />
-    <ObjectTarget bbox="0.0000 0.0000 0.0000 0.1425 0.0950 0.0950" captureAppVersion="6.5.0" lastSaved="2021-05-14T07:34:00Z" name="MiliammeterE513V2" targetId="e1ac3bb305f0444984d97718ce8b7ed8" version="12.0" />
-    <ObjectTarget bbox="0.0000 0.0000 0.0000 0.1425 0.0950 0.0950" captureAppVersion="6.5.0" lastSaved="2021-02-24T14:45:16Z" name="multimetr" targetId="0981bc02857641c9a5e693900d00b853" version="12.0" />
     <ObjectTarget bbox="0.0000 0.0000 0.0000 0.1425 0.0950 0.0950" captureAppVersion="6.5.0" lastSaved="2021-02-24T09:30:08Z" name="ShopResistanceP32" targetId="2b0315519f0245fbb6e67880ae34f9e2" version="12.0" />
-    <ObjectTarget bbox="0.0000 0.0000 0.0000 0.1425 0.0950 0.0950" captureAppVersion="6.5.0" lastSaved="2021-02-24T08:57:11Z" name="VoltmeterE515" targetId="8199bed5ac2846b8bd2f8f8e7d6d3962" version="12.0" />
-    <ObjectTarget bbox="0.0000 0.0000 0.0000 0.1425 0.0950 0.0950" captureAppVersion="6.5.0" lastSaved="2021-02-24T09:27:00Z" name="MilliammeterE513" targetId="896d8b8069924e8e8b8825110d28e6bb" version="12.0" />
   </TargetSet>
 </QCARInfo>
