@@ -8,6 +8,7 @@ using System.Linq;
 public class PickupObject : MonoBehaviourPunCallbacks
 {
 
+
 	public GameObject PickPotionButton;
 	public GameObject DropPotionButton;
 	public GameObject WireBox;
