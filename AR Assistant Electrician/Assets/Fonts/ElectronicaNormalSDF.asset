@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: 17372 SDF
+  m_Name: ElectronicaNormalSDF
   m_EditorClassIdentifier: 
-  hashCode: 483427009
+  hashCode: 1014798145
   material: {fileID: 7327266557280390282}
-  materialHashCode: 2118002753
+  materialHashCode: 1911729345
   m_Version: 1.1.0
   m_SourceFontFileGUID: fbc20c5f50d0c8d469a1718af39238d3
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: fbc20c5f50d0c8d469a1718af39238d3,
