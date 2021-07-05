@@ -6,10 +6,11 @@ public class UIManagerMenu : MonoBehaviour
 {
     public static UIManagerMenu instance;
 
+    [Header("Screens")]
     public GameObject menuUI;
     public GameObject menuLabUI;
     public GameObject labUI;
-    public GameObject instUI;
+    public GameObject instructionUI;
 
     private void Awake()
     {
@@ -44,13 +45,13 @@ public class UIManagerMenu : MonoBehaviour
     public void InstructionUIScreen()
     {
         menuUI.SetActive(false);
-        instUI.SetActive(true);
+        instructionUI.SetActive(true);
     }
 
     public void FromInstructionUIScreen()
     {
         menuUI.SetActive(true);
-        instUI.SetActive(false);
+        instructionUI.SetActive(false);
     }
 
     public void LabUIScreen()

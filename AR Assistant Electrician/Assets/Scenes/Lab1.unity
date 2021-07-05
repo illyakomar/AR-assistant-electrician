@@ -3403,7 +3403,7 @@ Transform:
   - {fileID: 241476787}
   - {fileID: 365780557}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &195509617
 MonoBehaviour:
@@ -6726,7 +6726,7 @@ Transform:
   - {fileID: 642322465}
   - {fileID: 1617261660}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &376771880
 MeshFilter:
@@ -6754,7 +6754,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 888015709}
+  - {fileID: 1360511151}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9014,7 +9014,7 @@ RectTransform:
   - {fileID: 1736939612}
   - {fileID: 542146198}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11052,7 +11052,7 @@ Transform:
   m_Children:
   - {fileID: 2013938415}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &691749954
 GameObject:
@@ -11619,7 +11619,7 @@ Transform:
   - {fileID: 934211340}
   - {fileID: 318570807}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &728535713
 MonoBehaviour:
@@ -14085,34 +14085,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 875064053}
   m_CullTransparentMesh: 0
---- !u!21 &888015709
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'BatteryE1Material
-
-    19942'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 2a828ee5884d47adba41b68f70712565, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &888137999
 GameObject:
   m_ObjectHideFlags: 0
@@ -15300,7 +15272,7 @@ Transform:
   m_Children:
   - {fileID: 758927254}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &960786911
 GameObject:
@@ -17255,7 +17227,7 @@ Transform:
   m_Children:
   - {fileID: 1364804902}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1072198036
 GameObject:
@@ -18610,7 +18582,7 @@ Transform:
   m_Children:
   - {fileID: 1132964438}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1203684279
 GameObject:
@@ -20451,6 +20423,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1347767732}
   m_CullTransparentMesh: 0
+--- !u!21 &1360511151
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'BatteryE1Material
+
+    15584'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 2a828ee5884d47adba41b68f70712565, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1364804901
 GameObject:
   m_ObjectHideFlags: 0
@@ -21965,7 +21965,7 @@ Transform:
   - {fileID: 337310417}
   - {fileID: 1504019457}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1466910440
 MonoBehaviour:
@@ -22872,7 +22872,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1544929825
 MonoBehaviour:
@@ -22886,28 +22886,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e52244a2d2398a742aea656af839373a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LabTask: {fileID: 1112996772}
-  LabLabEquipment: {fileID: 1647744255}
-  AllLab: {fileID: 1985814244}
-  Ammeter: {fileID: 1199210279}
-  Voltmeter: {fileID: 1068579613}
-  SupportShop: {fileID: 958100367}
-  Source: {fileID: 686429609}
-  Camera: {fileID: 1816185990}
-  Green: {fileID: 1209329400}
-  ScanLine: {fileID: 875064053}
-  AmmeterInfo: {fileID: 133248721}
-  AmmeterYouTube: {fileID: 934211339}
-  AmmeterLink: {fileID: 318570806}
-  VoltmeterInfo: {fileID: 1103356494}
-  VoltmeterYouTube: {fileID: 241476786}
-  VoltmeterLink: {fileID: 365780556}
-  SupportShopInfo: {fileID: 2019524161}
-  SupportShopYouTube: {fileID: 474331297}
-  SupportShopLink: {fileID: 337310416}
-  BatteryInfo: {fileID: 1720658486}
-  BatteryYouTube: {fileID: 1044199380}
-  BatteryLink: {fileID: 642322464}
+  lab: {fileID: 1985814244}
+  labTask: {fileID: 1112996772}
+  labEquipment: {fileID: 1647744255}
+  ammeter: {fileID: 1199210279}
+  voltmeter: {fileID: 1068579613}
+  supportShop: {fileID: 958100367}
+  source: {fileID: 686429609}
+  camera: {fileID: 1816185990}
+  greenTriangle: {fileID: 1209329400}
+  redTriangle: {fileID: 875064053}
+  ammeterInfo: {fileID: 133248721}
+  ammeterYouTube: {fileID: 934211339}
+  ammeterLink: {fileID: 318570806}
+  voltmeterInfo: {fileID: 1103356494}
+  voltmeterYouTube: {fileID: 241476786}
+  voltmeterLink: {fileID: 365780556}
+  supportShopInfo: {fileID: 2019524161}
+  supportShopYouTube: {fileID: 474331297}
+  supportShopLink: {fileID: 337310416}
+  batteryInfo: {fileID: 1720658486}
+  batteryYouTube: {fileID: 1044199380}
+  batteryLink: {fileID: 642322464}
   info: 0
   youtube: 0
   link: 0
@@ -24915,7 +24915,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1697303640
 GameObject:
@@ -26475,7 +26475,7 @@ Transform:
   - {fileID: 1550178451}
   - {fileID: 1730072546}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1816185992
 MonoBehaviour:

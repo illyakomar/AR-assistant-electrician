@@ -7,29 +7,37 @@ public class UIManagerLab : MonoBehaviour
 {
     public static UIManagerLab instance;
 
-    public GameObject LabTask;
-    public GameObject LabLabEquipment;
-    public GameObject AllLab;
-    public GameObject Ammeter;
-    public GameObject Voltmeter;
-    public GameObject SupportShop;
-    public GameObject Source;
-    public GameObject Camera;
-    public GameObject Green;
-    public GameObject ScanLine;
+    [Header("Screens")]
+    public GameObject lab;
+    public GameObject labTask;
+    public GameObject labEquipment;
 
-    public GameObject AmmeterInfo;
-    public GameObject AmmeterYouTube;
-    public GameObject AmmeterLink;
-    public GameObject VoltmeterInfo;
-    public GameObject VoltmeterYouTube;
-    public GameObject VoltmeterLink;
-    public GameObject SupportShopInfo;
-    public GameObject SupportShopYouTube;
-    public GameObject SupportShopLink;
-    public GameObject BatteryInfo;
-    public GameObject BatteryYouTube;
-    public GameObject BatteryLink;
+    [Header("Information Screens")]
+    public GameObject ammeter;
+    public GameObject voltmeter;
+    public GameObject supportShop;
+    public GameObject source;
+
+    [Header("AR Camera")]
+    public GameObject camera;
+    public GameObject greenTriangle;
+    public GameObject redTriangle;
+
+    [Header("Target")]
+    public GameObject ammeterInfo;
+    public GameObject ammeterYouTube;
+    public GameObject ammeterLink;
+    public GameObject voltmeterInfo;
+    public GameObject voltmeterYouTube;
+    public GameObject voltmeterLink;
+    public GameObject supportShopInfo;
+    public GameObject supportShopYouTube;
+    public GameObject supportShopLink;
+    public GameObject batteryInfo;
+    public GameObject batteryYouTube;
+    public GameObject batteryLink;
+
+
     public bool info;
     public bool youtube;
     public bool link;
@@ -50,130 +58,130 @@ public class UIManagerLab : MonoBehaviour
 
     public void LabEquipment()
     {
-        LabLabEquipment.SetActive(true);
-        LabTask.SetActive(false);
+        labEquipment.SetActive(true);
+        labTask.SetActive(false);
     }
 
     public void LabTaskBack()
     {
-        LabTask.SetActive(true);
-        LabLabEquipment.SetActive(false);
+        labTask.SetActive(true);
+        labEquipment.SetActive(false);
     }
 
     public void OnAmmeter()
     {
-        Camera.SetActive(true);
-        Ammeter.SetActive(true);
-        LabLabEquipment.SetActive(false);
-        AllLab.SetActive(false);
-        Green.SetActive(true);
-        ScanLine.SetActive(true);
+        camera.SetActive(true);
+        ammeter.SetActive(true);
+        labEquipment.SetActive(false);
+        lab.SetActive(false);
+        greenTriangle.SetActive(true);
+        redTriangle.SetActive(true);
     }
 
     public void OnVoltmeter()
     {
-        Camera.SetActive(true);
-        Voltmeter.SetActive(true);
-        LabLabEquipment.SetActive(false);
-        AllLab.SetActive(false);
-        Green.SetActive(true);
-        ScanLine.SetActive(true);
+        camera.SetActive(true);
+        voltmeter.SetActive(true);
+        labEquipment.SetActive(false);
+        lab.SetActive(false);
+        greenTriangle.SetActive(true);
+        redTriangle.SetActive(true);
     }
 
     public void OnSupportShop()
     {
-        Camera.SetActive(true);
-        SupportShop.SetActive(true);
-        LabLabEquipment.SetActive(false);
-        AllLab.SetActive(false);
-        Green.SetActive(true);
-        ScanLine.SetActive(true);
+        camera.SetActive(true);
+        supportShop.SetActive(true);
+        labEquipment.SetActive(false);
+        lab.SetActive(false);
+        greenTriangle.SetActive(true);
+        redTriangle.SetActive(true);
     }
 
     public void OnSource()
     {
-        Source.SetActive(true);
-        Camera.SetActive(true);
-        LabLabEquipment.SetActive(false);
-        AllLab.SetActive(false);
-        Green.SetActive(true);
-        ScanLine.SetActive(true);
+        source.SetActive(true);
+        camera.SetActive(true);
+        labEquipment.SetActive(false);
+        lab.SetActive(false);
+        greenTriangle.SetActive(true);
+        redTriangle.SetActive(true);
     }
 
     public void FromAmmeter()
     {
-        Ammeter.SetActive(false);
-        Camera.SetActive(false);
-        LabLabEquipment.SetActive(true);
-        AllLab.SetActive(true);
+        ammeter.SetActive(false);
+        camera.SetActive(false);
+        labEquipment.SetActive(true);
+        lab.SetActive(true);
         info = false;
         youtube = false;
         link = false;
-        Green.SetActive(false);
-        ScanLine.SetActive(false);
-        AmmeterInfo.SetActive(false);
-        AmmeterYouTube.SetActive(false);
-        AmmeterLink.SetActive(false);
+        greenTriangle.SetActive(false);
+        redTriangle.SetActive(false);
+        ammeterInfo.SetActive(false);
+        ammeterYouTube.SetActive(false);
+        ammeterLink.SetActive(false);
     }
 
     public void FromVoltmeter()
     {
-        Voltmeter.SetActive(false);
-        Camera.SetActive(false);
-        LabLabEquipment.SetActive(true);
-        AllLab.SetActive(true);
+        voltmeter.SetActive(false);
+        camera.SetActive(false);
+        labEquipment.SetActive(true);
+        lab.SetActive(true);
         info = false;
         youtube = false;
         link = false;
-        Green.SetActive(false);
-        ScanLine.SetActive(false);
-        VoltmeterInfo.SetActive(false);
-        VoltmeterYouTube.SetActive(false);
-        VoltmeterLink.SetActive(false);
+        greenTriangle.SetActive(false);
+        redTriangle.SetActive(false);
+        voltmeterInfo.SetActive(false);
+        voltmeterYouTube.SetActive(false);
+        voltmeterLink.SetActive(false);
     }
 
     public void FromSupportShop()
     {
-        SupportShop.SetActive(false);
-        Camera.SetActive(false);
-        LabLabEquipment.SetActive(true);
-        AllLab.SetActive(true);
+        supportShop.SetActive(false);
+        camera.SetActive(false);
+        labEquipment.SetActive(true);
+        lab.SetActive(true);
         info = false;
         youtube = false;
         link = false;
-        Green.SetActive(false);
-        ScanLine.SetActive(false);
-        SupportShopInfo.SetActive(false);
-        SupportShopYouTube.SetActive(false);
-        SupportShopLink.SetActive(false);
+        greenTriangle.SetActive(false);
+        redTriangle.SetActive(false);
+        supportShopInfo.SetActive(false);
+        supportShopYouTube.SetActive(false);
+        supportShopLink.SetActive(false);
     }
 
     public void FromSource()
     {
-        Source.SetActive(false);
-        Camera.SetActive(false);
-        LabLabEquipment.SetActive(true);
-        AllLab.SetActive(true);
+        source.SetActive(false);
+        camera.SetActive(false);
+        labEquipment.SetActive(true);
+        lab.SetActive(true);
         info = false;
         youtube = false;
         link = false;
-        Green.SetActive(false);
-        ScanLine.SetActive(false);
-        BatteryInfo.SetActive(false);
-        BatteryYouTube.SetActive(false);
-        BatteryLink.SetActive(false);
+        greenTriangle.SetActive(false);
+        redTriangle.SetActive(false);
+        batteryInfo.SetActive(false);
+        batteryYouTube.SetActive(false);
+        batteryLink.SetActive(false);
     }
 
     public void InfoAmmeter()
     {
         if (!info)
         {
-            AmmeterInfo.SetActive(true);
+            ammeterInfo.SetActive(true);
             info = true;
         }
         else
         {
-            AmmeterInfo.SetActive(false);
+            ammeterInfo.SetActive(false);
             info = false;
         }
     }
@@ -182,12 +190,12 @@ public class UIManagerLab : MonoBehaviour
     {
         if (!info)
         {
-            VoltmeterInfo.SetActive(true);
+            voltmeterInfo.SetActive(true);
             info = true;
         }
         else
         {
-            VoltmeterInfo.SetActive(false);
+            voltmeterInfo.SetActive(false);
             info = false;
         }
     }
@@ -196,12 +204,12 @@ public class UIManagerLab : MonoBehaviour
     {
         if (!info)
         {
-            SupportShopInfo.SetActive(true);
+            supportShopInfo.SetActive(true);
             info = true;
         }
         else
         {
-            SupportShopInfo.SetActive(false);
+            supportShopInfo.SetActive(false);
             info = false;
         }
     }
@@ -210,12 +218,12 @@ public class UIManagerLab : MonoBehaviour
     {
         if (!info)
         {
-            BatteryInfo.SetActive(true);
+            batteryInfo.SetActive(true);
             info = true;
         }
         else
         {
-            BatteryInfo.SetActive(false);
+            batteryInfo.SetActive(false);
             info = false;
         }
     }
@@ -224,12 +232,12 @@ public class UIManagerLab : MonoBehaviour
     {
         if (!youtube)
         {
-            AmmeterYouTube.SetActive(true);
+            ammeterYouTube.SetActive(true);
             youtube = true;
         }
         else
         {
-            AmmeterYouTube.SetActive(false);
+            ammeterYouTube.SetActive(false);
             youtube = false;
         }
     }
@@ -238,12 +246,12 @@ public class UIManagerLab : MonoBehaviour
     {
         if (!youtube)
         {
-            VoltmeterYouTube.SetActive(true);
+            voltmeterYouTube.SetActive(true);
             youtube = true;
         }
         else
         {
-            VoltmeterYouTube.SetActive(false);
+            voltmeterYouTube.SetActive(false);
             youtube = false;
         }
     }
@@ -252,12 +260,12 @@ public class UIManagerLab : MonoBehaviour
     {
         if (!youtube)
         {
-            SupportShopYouTube.SetActive(true);
+            supportShopYouTube.SetActive(true);
             youtube = true;
         }
         else
         {
-            SupportShopYouTube.SetActive(false);
+            supportShopYouTube.SetActive(false);
             youtube = false;
         }
     }
@@ -266,12 +274,12 @@ public class UIManagerLab : MonoBehaviour
     {
         if (!youtube)
         {
-            BatteryYouTube.SetActive(true);
+            batteryYouTube.SetActive(true);
             youtube = true;
         }
         else
         {
-            BatteryYouTube.SetActive(false);
+            batteryYouTube.SetActive(false);
             youtube = false;
         }
     }
@@ -280,12 +288,12 @@ public class UIManagerLab : MonoBehaviour
     {
         if (!link)
         {
-            AmmeterLink.SetActive(true);
+            ammeterLink.SetActive(true);
             link = true;
         }
         else
         {
-            AmmeterLink.SetActive(false);
+            ammeterLink.SetActive(false);
             link = false;
         }
     }
@@ -294,12 +302,12 @@ public class UIManagerLab : MonoBehaviour
     {
         if (!link)
         {
-            VoltmeterLink.SetActive(true);
+            voltmeterLink.SetActive(true);
             link = true;
         }
         else
         {
-            VoltmeterLink.SetActive(false);
+            voltmeterLink.SetActive(false);
             link = false;
         }
     }
@@ -308,12 +316,12 @@ public class UIManagerLab : MonoBehaviour
     {
         if (!link)
         {
-            SupportShopLink.SetActive(true);
+            supportShopLink.SetActive(true);
             link = true;
         }
         else
         {
-            SupportShopLink.SetActive(false);
+            supportShopLink.SetActive(false);
             link = false;
         }
     }
@@ -322,12 +330,12 @@ public class UIManagerLab : MonoBehaviour
     {
         if (!link)
         {
-            BatteryLink.SetActive(true);
+            batteryLink.SetActive(true);
             link = true;
         }
         else
         {
-            BatteryLink.SetActive(false);
+            batteryLink.SetActive(false);
             link = false;
         }
     }

@@ -4148,7 +4148,7 @@ MonoBehaviour:
   menuUI: {fileID: 2021628595}
   menuLabUI: {fileID: 1750972234}
   labUI: {fileID: 1595462288}
-  instUI: {fileID: 94616338}
+  instructionUI: {fileID: 94616338}
 --- !u!1 &1157588995
 GameObject:
   m_ObjectHideFlags: 0
